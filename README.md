@@ -1,6 +1,8 @@
 Elixometer
 ==========
 
+Adikteev's version with a hack to include tags with the name of metrics.
+
 [![Build Status](https://travis-ci.org/pinterest/elixometer.svg?branch=master)](https://travis-ci.org/pinterest/elixometer)
 [![Coverage Status](https://coveralls.io/repos/pinterest/elixometer/badge.svg?branch=&service=github)](https://coveralls.io/github/pinterest/elixometer?branch=master)
 
