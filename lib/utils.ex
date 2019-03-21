@@ -6,8 +6,17 @@ defmodule Elixometer.Utils do
   def format(_metric_type, name) when is_list(name) do
     name
   end
+  def format(_metric_type, {name, _tags}) when is_list(name) do
+    name
+  end
+  def format(metric_type, {name, tags}) do
+    {do_format(metric_type, name), tags}
+  end
+  def format(metric_type, name) do
+    do_format(metric_type, name)
+  end
 
-  def format(metric_type, name) when is_bitstring(name) do
+  defp do_format(metric_type, name) when is_bitstring(name) do
     config = Application.get_all_env(:elixometer)
     prefix = config[:metric_prefix] || "elixometer"
 
